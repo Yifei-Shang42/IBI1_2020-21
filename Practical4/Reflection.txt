@@ -1,0 +1,24 @@
+Reflection about Practical 4
+
+I encountered the following problems:
+
+1. There was a merge conflict when I was trying two merge the 2 branches.
+
+	Solution: I edited thingsIlike.txt to a version I liked and commited again. I then used "git log --graph --oneline" and found out the merge was successful.
+
+2. When using "git clone" I could not connect and kept getting 443 timeout error messages.
+	
+	Solution: I used "git clone git://github.com/..." as in "Bioinformatics Data Skills" by Vince Buffalo instead of "git clone https://github.com/...".
+
+3. When using "git push" I got an error message saying I should push to "https://github.com/,,," instead of "git://github.com/...".
+
+	Solution: This is related to problem No.2 because I used a different command to clone.
+
+		  I then changed "origin" to the complete https path in command "git push origin master" and it worked.
+
+Summary:
+	This was a really challenging practical but it was fun at the same time. 
+
+	I learned much more than merely the content in the practical guide.
+	
+	This practical also improve my online searching skill.
