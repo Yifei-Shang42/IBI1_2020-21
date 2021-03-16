@@ -17,6 +17,6 @@ sorted_average_length_array = sorted(lengths_array/counts_array)
 print(list(sorted_average_length_array))
 # draw the pie chart
 explode = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1)
-plt.pie(sorted_average_length_array, shadow=True, explode=explode)
-plt.title("Average Exon Lengths")
+plt.boxplot(sorted_average_length_array)
+plt.title("Exon Lengths")
 plt.show()
