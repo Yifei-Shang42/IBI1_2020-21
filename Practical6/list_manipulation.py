@@ -15,8 +15,7 @@ counts_array = np.array(exon_counts)
 sorted_average_length_array = sorted(lengths_array/counts_array)
 # convert result into list and print
 print(list(sorted_average_length_array))
-# draw the pie chart
-explode = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1)
-plt.boxplot(sorted_average_length_array)
+# draw the boxplot
+plt.boxplot(sorted_average_length_array, labels="X")
 plt.title("Exon Lengths")
 plt.show()

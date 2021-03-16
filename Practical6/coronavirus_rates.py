@@ -12,6 +12,6 @@ print(dict_of_cases)
 data = np.array([i for i in dict_of_cases.values()])
 labels = np.array([j for j in dict_of_cases.keys()])
 # draw the pie chart as output
-plt.pie(data, labels=labels, shadow=True)
+plt.pie(data, labels=labels, shadow=True, autopct='%1.1f%%')
 plt.title("Coronavirus Infection Rates across Countries")
 plt.show()
