@@ -1,0 +1,15 @@
+Question: 
+How have new cases and total cases developed over time in Spain?
+
+Start Line Number: 
+76
+
+Discussion: 
+Numbers of new cases and total cases are almost 0 before 2020-03-08.
+From 2020-03-08 to 2020-03-27, number of new cases steadily increases.
+After 2020-03-27, number of new cases begins to mildly decrease.
+from 2020-03-08, number of total cases increases drastically.
+
+From the plot we can conclude that first case in Spain was confirmed early March 2020.
+Number of new cases starts to decrease from 2020-03-27. 
+This suggests after 2020-03-13 (considering infection was confirmed 14 days later), effective actions were taken to prevent the spread of the virus.
