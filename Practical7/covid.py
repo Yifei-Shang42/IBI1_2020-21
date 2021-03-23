@@ -14,7 +14,7 @@ covid_data = pd.read_csv("full_data.csv")
 covid_data.info()
 
 # show every second row between 0 and 10
-covid_data.iloc[0:10:2, 0:]
+covid_data.iloc[0:11:2, 0:]
 
 # total cases for rows of Afghanistan
 def gen_country_boolean_list(country):
