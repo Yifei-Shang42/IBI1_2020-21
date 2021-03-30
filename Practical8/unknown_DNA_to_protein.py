@@ -106,7 +106,3 @@ fout = codecs.open("protein.fa", "w", "utf-8")
 for line in result:
     fout.write(line)
 fout.close()
-
-
-
-
