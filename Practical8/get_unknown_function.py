@@ -25,7 +25,7 @@ for i in range(len(lines)):
 for i in range(len(result_list)):
     if result_list[i].startswith(">"):
         result_list[i] += "  "
-        result_list[i] += str(len(result_list[i+1]))
+        result_list[i] += str(len(result_list[i+1])-1)
         result_list[i] += "\n"
     # write result into outfile
 fout = codecs.open('unknown_function.fa', "w", "utf-8")
