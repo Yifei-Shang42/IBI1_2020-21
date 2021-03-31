@@ -11,7 +11,7 @@ with codecs.open("Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa",
     # extract data from file
 result_list = []
 for i in range(len(lines)):
-    if lines[i].startswith(">"):
+    if lines[i].startswith(">") and "unknown function" in lines[i]:
         result_list.append(findall(r'(>.+?)(?:_| )', lines[i])[0])
         bases = ""
         for j in range(len(lines[i:-1])):
