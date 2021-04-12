@@ -9,7 +9,7 @@ def reverse_complement_calculator(seq):
         The reverse complement strand of the DNA in UPPER CASE (string)
     """
         # capitalize all bases
-    seq.capitalize()
+    seq = seq.upper()
 
         # generate complement strand
     complement = []
@@ -30,4 +30,4 @@ def reverse_complement_calculator(seq):
     return result
 
 # example
-reverse_complement_calculator("ATCGATCGATCG")
+reverse_complement_calculator("ATCGAtcGATCG")
