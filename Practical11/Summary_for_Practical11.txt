@@ -1,0 +1,11 @@
+Summary for Practical 11
+
+Approach:
+3 pairwise non-gapped global alignments (human-mouse, human-random, mouse-random) were conducted using the BLOSUM62 matrix acquired from Biopython.
+
+Results:
+1. According to the alignment output, human-mouse group scored 1091 with 89.64% identical amino acids.
+2. When comparing the human and mouse sequences with a random sequence, both sequences scored -250 with 5.41% (human-random) and 5.86% (mouse-random) of identical amino acids.
+
+Analysis:
+The high alignment score and percentage of identical amino acids of human-mouse group shows that human and mouse SOD2 sequences are highly similar which suggests that SOD2 protein is highly conserved across species. This conservation suggests that this protein may be one of the house keeping proteins which may be involved in the maintainance of basic cellular functions. The low alignment scores and percentages of identical amino acids of human-random and mouse-random groups provide extra evidence for that similarity between the human and mouse SOD2 is not likely due to chance. 
