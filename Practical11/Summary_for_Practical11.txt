@@ -8,4 +8,13 @@ Results:
 2. When comparing the human and mouse sequences with a random sequence, both sequences scored -250 with 5.41% (human-random) and 5.86% (mouse-random) of identical amino acids.
 
 Analysis:
-The high alignment score and percentage of identical amino acids of human-mouse group shows that human and mouse SOD2 sequences are highly similar which suggests that SOD2 protein is highly conserved across species. This conservation suggests that this protein may be one of the house keeping proteins which may be involved in the maintainance of basic cellular functions. The low alignment scores and percentages of identical amino acids of human-random and mouse-random groups provide extra evidence for that similarity between the human and mouse SOD2 is not likely due to chance. 
+
+Possible Evolutionary Origin of SOD2 Protein: 
+The high alignment score and percentage of identical amino acids of human-mouse group shows that human and mouse SOD2 sequences are highly similar, 
+which suggests that SOD2 protein is highly conserved across species and may also be present in the common ancestors of human and mouse.
+
+Possible Biological Function of SOD2 Protein:
+This conservation suggests that this protein may be one of the house keeping proteins which may be involved in the maintainance of basic cellular functions like energy production or protein transport which are not species-specific. 
+
+Verification of Results Using Random Sequence:
+The low alignment scores and percentages of identical amino acids of human-random and mouse-random groups provide extra evidence for that similarity between the human and mouse SOD2 is not likely due to chance. 
