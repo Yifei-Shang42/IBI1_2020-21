@@ -15,7 +15,7 @@ def read_fasta(filename):
     """
     infile = open(filename, "r")
     lines = infile.readlines()
-    name = lines[0][:-1]
+    name = lines[0][1:-1]
     seq = lines[1][:-1]
     return [name, seq]
 
@@ -102,4 +102,3 @@ def gen_output(fasta1, fasta2):
 gen_output(sod2_human, sod2_mouse)
 gen_output(sod2_human, random_seq)
 gen_output(sod2_mouse, random_seq)
-
