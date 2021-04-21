@@ -17,6 +17,7 @@ def read_fasta(filename):
     lines = infile.readlines()
     name = lines[0][1:-1]
     seq = lines[1][:-1]
+    infile.close()
     return [name, seq]
 
     # read the three fasta file into lists using read_fasta
