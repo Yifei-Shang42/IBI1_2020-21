@@ -32,7 +32,7 @@ def get_primary_matches(terms, molecule_name):
             match_list.append(term)
     return match_list
 
-# assistant function for all the children (including the parents from previous function)
+# assistant function for all the children (including the parents from previous function, parents are removed in the next function)
 def getAllChildren(term_id_dict, elements):
     allChildren = []
     for element in elements:
