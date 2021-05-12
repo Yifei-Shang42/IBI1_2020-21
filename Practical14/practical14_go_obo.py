@@ -105,7 +105,7 @@ def getAllChildren(tree, vertices):
 def count_childNodes_macromolecules_xml(tree, molecule_name):
     match_list = get_primary_matches(terms, molecule_name)
     vertices_list = [tree.getVertex(term.getElementsByTagName("id")[0].childNodes[0].data) for term in match_list]
-    count = len(list(set(getAllChildren(tree, vertices_list))))
+    count = len(list(set(getAllChildren(tree, vertices_list)))) - len(match_list)
     return count
 
 # define file path (absolute path)
@@ -118,10 +118,10 @@ terms = parse_xml(path)
 tree = buildTree(terms)
 
 # Calculate & print the data
-dna = count_childNodes_macromolecules_xml(tree, "DNA")  # 8926
-rna = count_childNodes_macromolecules_xml(tree, "RNA")  # 11298
-protein = count_childNodes_macromolecules_xml(tree, "protein")  # 33877
-carbo = count_childNodes_macromolecules_xml(tree, "carbohydrate")  # 4946
+dna = count_childNodes_macromolecules_xml(tree, "DNA")  # 7271
+rna = count_childNodes_macromolecules_xml(tree, "RNA")  # 8927
+protein = count_childNodes_macromolecules_xml(tree, "protein")  # 27771
+carbo = count_childNodes_macromolecules_xml(tree, "carbohydrate")  # 4743
 
 print("Number of childNodes of all DNA-associated terms: {}".format(dna))
 print("Number of childNodes of all RNA-associated terms: {}".format(rna))
