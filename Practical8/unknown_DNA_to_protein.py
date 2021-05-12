@@ -4,7 +4,6 @@ import codecs
 from re import *
     # create translation function
 def translate_dna_to_protein(seq):
-    # construct the translation dict
     translation_dict = {"TTT": "F",
                         "TTC": "F",
                         "TTA": "L",
@@ -39,8 +38,8 @@ def translate_dna_to_protein(seq):
                         "GCG": "A",
                         "TAT": "Y",
                         "TAC": "Y",
-                        "TAA": "STOP",
-                        "TAG": "STOP",
+                        "TAA": "O",
+                        "TAG": "U",
                         "CAT": "H",
                         "CAC": "H",
                         "CAA": "Q",
@@ -55,7 +54,7 @@ def translate_dna_to_protein(seq):
                         "GAG": "E",
                         "TGT": "C",
                         "TGC": "C",
-                        "TGA": "STOP",
+                        "TGA": "X",
                         "TGG": "W",
                         "CGT": "R",
                         "CGC": "R",
@@ -73,11 +72,11 @@ def translate_dna_to_protein(seq):
     protein = ""
     # translate amino acids one by one
     for i in range(0, len(seq), 3):
-        if translation_dict[seq[i:i + 3]] != "STOP":
-            protein += translation_dict[seq[i:i + 3]]
-        else:
+        protein += translation_dict[seq[i:i + 3]]
+        if seq[i:i + 3] in ["TAA", "TAG", "TGA"]:
             break
     return protein
+
 # change directory
 chdir("C:\\Users\\surface\\Documents\\GitHub\\IBI1_2020-21\\Practical8")
     # input filename
