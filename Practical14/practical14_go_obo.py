@@ -118,10 +118,10 @@ terms = parse_xml(path)
 tree = buildTree(terms)
 
 # Calculate & print the data
-dna = count_childNodes_macromolecules_xml(tree, "DNA")
-rna = count_childNodes_macromolecules_xml(tree, "RNA")
-protein = count_childNodes_macromolecules_xml(tree, "protein")
-carbo = count_childNodes_macromolecules_xml(tree, "carbohydrate")
+dna = count_childNodes_macromolecules_xml(tree, "DNA")  # 8926
+rna = count_childNodes_macromolecules_xml(tree, "RNA")  # 11298
+protein = count_childNodes_macromolecules_xml(tree, "protein")  # 33877
+carbo = count_childNodes_macromolecules_xml(tree, "carbohydrate")  # 4946
 
 print("Number of childNodes of all DNA-associated terms: {}".format(dna))
 print("Number of childNodes of all RNA-associated terms: {}".format(rna))
