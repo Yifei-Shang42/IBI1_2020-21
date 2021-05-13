@@ -134,5 +134,5 @@ data = {"DNA": dna, "RNA": rna,
 values = np.array([i for i in data.values()])
 labels = np.array([j for j in data.keys()])
 plt.pie(values, labels=labels, shadow=True, autopct='%1.1f%%')
-plt.title("")
+plt.title("Child Nodes of 4 macromolecules")
 plt.show()
