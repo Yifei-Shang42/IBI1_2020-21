@@ -80,7 +80,7 @@ def translate_dna_to_protein(seq):
 # change directory
 chdir("C:\\Users\\surface\\Documents\\GitHub\\IBI1_2020-21\\Practical8")
     # input filename
-name = input()
+name = input("Your input file name:")
     # read input data
 with codecs.open(name, "r", "utf-8") as infile:
     lines = infile.readlines()
@@ -101,7 +101,8 @@ for i in range(len(result)):
     else:
         result[i] += "\n"
     # write result into outfile
-fout = codecs.open("protein.fa", "w", "utf-8")
+outname = input("Your output file name:")
+fout = codecs.open(outname, "w", "utf-8")
 for line in result:
     fout.write(line)
 fout.close()
