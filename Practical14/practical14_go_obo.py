@@ -1,5 +1,17 @@
 # Practical 14: Working with Information
 
+"""
+Approach:
+
+In this practical, I designed two additional classes: Vertex & Graph to establish connections between
+parent nodes & child nodes, which greatly enhanced the search efficiency.
+
+Later I found out that this could also be accomplished using python dictionaries only, but I'd still like
+to put my knowledge about graphs into practice in this practical.
+
+Hope this won't bring any inconvenience comprehending my codes.
+"""
+
 # import modules
 from xml.dom.minidom import parse
 import xml.dom.minidom
@@ -23,7 +35,7 @@ def get_primary_matches(terms, molecule_name):
             match_list.append(term)
     return match_list
 
-# 2 assistant classes: Vertex & Graph to structurize terms
+# 2 assistant classes: Vertex & Graph to establish connection between nodes for faster search
 class Vertex:
     def __init__(self, key):
         self.id = key
