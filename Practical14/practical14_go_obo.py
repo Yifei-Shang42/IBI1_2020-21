@@ -117,7 +117,21 @@ def getAllChildren(tree, vertices):
 def count_childNodes_macromolecules_xml(tree, molecule_name):
     match_list = get_primary_matches(terms, molecule_name)
     vertices_list = [tree.getVertex(term.getElementsByTagName("id")[0].childNodes[0].data) for term in match_list]
-    count = len(list(set(getAllChildren(tree, vertices_list)))) - len(match_list)
+    # add back obsolete DNA related nodes which were subtracted twice
+    obo_list = [term for term in match_list if term.getElementsByTagName("is_obsolete")]
+    # calculate result
+    result_list = list(set(getAllChildren(tree, vertices_list)))
+
+    def final_result(result_list):
+        connected_list = []
+        ancestors = []
+        for vertex in result_list:
+            connected_list += list(vertex.connectedTo.keys())
+        connected_list = list(set(connected_list))
+        return len(connected_list)
+
+    # final result
+    count = final_result(result_list)
     return count
 
 # define file path (absolute path)
@@ -130,14 +144,16 @@ terms = parse_xml(path)
 tree = buildTree(terms)
 
 # Calculate & print the data
-dna = count_childNodes_macromolecules_xml(tree, "DNA")  # 7271
-rna = count_childNodes_macromolecules_xml(tree, "RNA")  # 8927
-protein = count_childNodes_macromolecules_xml(tree, "protein")  # 27771
-carbo = count_childNodes_macromolecules_xml(tree, "carbohydrate")  # 4743
-
+dna = count_childNodes_macromolecules_xml(tree, "DNA")  # 8651
 print("Number of childNodes of all DNA-associated terms: {}".format(dna))
+
+rna = count_childNodes_macromolecules_xml(tree, "RNA")  # 11004
 print("Number of childNodes of all RNA-associated terms: {}".format(rna))
+
+protein = count_childNodes_macromolecules_xml(tree, "protein")  # 33459
 print("Number of childNodes of all protein-associated terms: {}".format(protein))
+
+carbo = count_childNodes_macromolecules_xml(tree, "carbohydrate")  # 4879
 print("Number of childNodes of all carbohydrate-associated terms: {}".format(carbo))
 
 # Plot the pie chart
@@ -146,5 +162,5 @@ data = {"DNA": dna, "RNA": rna,
 values = np.array([i for i in data.values()])
 labels = np.array([j for j in data.keys()])
 plt.pie(values, labels=labels, shadow=True, autopct='%1.1f%%')
-plt.title("Child Nodes of 4 macromolecules")
+plt.title("Percentage of Child Nodes of 4 Macromolecules")
 plt.show()
