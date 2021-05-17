@@ -10,6 +10,8 @@ Later I found out that this could also be accomplished using python dictionaries
 to put my knowledge about graphs into practice in this practical.
 
 Hope this won't bring any inconvenience comprehending my codes.
+
+The whole program takes about 40s to RUN
 """
 
 # import modules
