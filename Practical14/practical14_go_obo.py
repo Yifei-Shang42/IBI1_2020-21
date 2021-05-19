@@ -6,9 +6,6 @@ Approach:
 In this practical, I designed two additional classes: Vertex & Graph to establish connections between
 parent nodes & child nodes, which greatly enhanced the search efficiency.
 
-Later I found out that this could also be accomplished using python dictionaries only, but I'd still like
-to put my knowledge about graphs into practice in this practical.
-
 Hope this won't bring any inconvenience comprehending my codes.
 
 The whole program takes about 40s to RUN

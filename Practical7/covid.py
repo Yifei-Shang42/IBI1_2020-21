@@ -44,7 +44,7 @@ plt.boxplot(world_new_cases)
 plt.show()
 
 # plot new cases worldwide
-world_dates = covid_data.loc[my_booleans, "date"]
+world_dates = covid_data.loc[world_booleans, "date"]
 plt.title("New Cases Worldwide")
 plt.plot(world_dates, world_new_cases, 'ro', label="New Cases")
 plt.legend()
